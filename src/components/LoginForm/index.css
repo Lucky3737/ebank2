@@ -1,0 +1,25 @@
+.app {
+  background-color: rgb(59, 59, 99);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  height: 60%;
+  width: 50%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.form {
+  padding: 40px;
+  width: 50%;
+  background-color: white;
+}
+.img {
+  width: 40%;
+  height: 80%;
+}
