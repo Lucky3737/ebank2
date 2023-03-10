@@ -2,9 +2,6 @@ import {Component} from 'react'
 
 import './index.css'
 
-const jwtToken =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjE0MjQyMCIsInJvbGUiOiJQUklNRV9VU0VSIiwiaWF0IjoxNjM0MDk4NzYyfQ.ZUCC2J2zBjRhLVa1EI_4EnkZ-M-7hoVZoZFAu8GTmEQ'
-
 class LoginForm extends Component {
   state = {userid: '', pin: ''}
 
@@ -14,12 +11,11 @@ class LoginForm extends Component {
     const userDetails = {userid, pin}
     const url = 'https://apis.ccbp.in/ebank/login'
     const options = {
-      body: JSON.stringify(userDetails),
       method: 'POST',
+      body: JSON.stringify(userDetails),
     }
     const response = await fetch(url, options)
-    const data = await response.json()
-    console.log(data)
+    console.log(response)
   }
 
   getUserId = event => {
@@ -43,25 +39,22 @@ class LoginForm extends Component {
           <div>
             <form className="form" onSubmit={this.submitForm}>
               <h1>WelCome Back!</h1>
-              <label htmlFor="userid">User Id</label>
+              <label htmlFor="user">User Id</label>
               <input
                 type="text"
-                id="userid"
+                id="user"
                 onChange={this.getUserId}
                 value={userid}
                 placeholder="Enter userid"
               />
-
-              <label htmlFor="pin">PIN</label>
-
+              <label htmlFor="password">PIN</label>
               <input
-                id="pin"
+                id="password"
                 type="password"
                 onChange={this.getPin}
                 value={pin}
                 placeholder="Enter Pin"
               />
-
               <button type="submit">Login</button>
             </form>
           </div>

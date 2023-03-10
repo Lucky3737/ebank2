@@ -11,15 +11,16 @@
   width: 50%;
   background-color: aliceblue;
   display: flex;
-  justify-content: space-between;
   padding: 30px;
+  align-items:center;
 }
 .form {
-  padding: 40px;
+
   width: 50%;
   background-color: white;
+  height:100%;
 }
 .img {
-  width: 40%;
+  width: 45%;
   height: 80%;
 }
